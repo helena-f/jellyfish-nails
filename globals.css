@@ -1,0 +1,42 @@
+/* Include mobile friendly css changes */
+body {
+    background: 
+    #002066;
+    /* linear-gradient(to bottom, #0077be, #003366);  */
+    color: #a8e6cf; /* Light green text */
+}
+nav {
+    background: linear-gradient(to bottom, #87ceeb, #ff7f50); /* Gradient from sky blue to orange */
+    padding: 10px;
+}
+nav a {
+    color: #003366; /* Dark blue text for links */
+    text-decoration: none;
+    margin: 0 15px;
+}
+nav a:hover {
+    color: #ffeb3b; /* Yellow on hover */
+}
+nav {
+    background-color: #333; /* Dark background */
+    overflow: hidden; /* Clear floats */
+}
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+nav ul li {
+    float: left; /* Align items horizontally */
+}
+nav ul li a {
+    display: block; /* Make links fill the list item */
+    color: #003366; /* Text color */
+    text-align: center; /* Center text */
+    padding: 14px 16px; /* Add padding */
+    text-decoration: none; /* Remove underline */
+}
+nav ul li a:hover {
+    background-color: #ddd; /* Light background on hover */
+    color: black; /* Change text color on hover */
+}
