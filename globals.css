@@ -1,13 +1,31 @@
 /* Include mobile friendly css changes */
+html, body {
+    font-family: "Figtree", serif;
+    height: 100%; /* Ensure the body takes up the full height */
+    margin: 0; /* Remove default margin */
+}
 body {
+    font-family: "Figtree", serif;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
     background: 
     #002066;
     /* linear-gradient(to bottom, #0077be, #003366);  */
     color: #a8e6cf; /* Light green text */
 }
+.content {
+    flex: 1; /* Allow the content area to grow and take available space */
+    display: flex; /* Use flexbox for content layout */
+    flex-direction: column; /* Stack content vertically */
+    padding: 20px; 
+}
+
+
 nav {
-    background: linear-gradient(to bottom, #87ceeb, #ff7f50); /* Gradient from sky blue to orange */
+    background: linear-gradient(to bottom, #a8e6cf, #f1ab92); /* Gradient from sky blue to orange */
     padding: 10px;
+    min-height: 50px; /* Ensure the nav has a minimum height */
+
 }
 nav a {
     color: #003366; /* Dark blue text for links */
@@ -37,6 +55,59 @@ nav ul li a {
     text-decoration: none; /* Remove underline */
 }
 nav ul li a:hover {
-    background-color: #ddd; /* Light background on hover */
-    color: black; /* Change text color on hover */
+    background-color: #332776; /* Light background on hover */
+    color: rgb(251, 209, 209); /* Change text color on hover */
+}
+.portfolio-container {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between items */
+    margin-top: 20px; /* Space above the portfolio */
+    width: 80%; /* Width of the portfolio container */
+    flex: 1; /* Allow the container to grow and take available space */
+}
+.portfolio-item {
+    overflow: hidden; /* Hide overflow */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+.portfolio-item img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove bottom space */
+}
+
+
+/* Footer styles */
+footer {
+    background-color: #4B3D3D; /* Dark brown background */
+    color: #ADD8E6; /* Light blue text */
+    text-align: center; /* Center text */
+    padding: 10px 0; /* Padding for spacing */
+}
+
+footer a {
+    color: #ADD8E6; /* Light blue text for links */
+    text-decoration: none; /* Remove underline */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.book-now-button {
+    display: inline-block; /* Ensure it behaves like an inline block */
+    padding: 10px 20px; /* Add padding */
+    background-color: #0077be; /* Button color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 15px; /* Space above the button */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    max-width: 200px; /* Set a maximum width */
+    text-align: center; /* Center text inside the button */
+}
+
+.book-now-button:hover {
+    background-color: #005f8a; /* Darker shade on hover */
 }

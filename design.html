@@ -2,6 +2,26 @@
 <html>
     <head>
         <link rel="stylesheet" href="globals.css"> <!-- Link to global styles -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <style>
+        body {
+            background-image: url('images/ocean-background.jpg'); /* Set the background image */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent the background from repeating */
+            color: #0e0f34;
+        }
+        .text-box {
+            background-color: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+            padding: 20px; /* Add padding around the text */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+            max-width: 600px; /* Set a maximum width for the box */
+            margin: 20px auto; /* Center the box horizontally */
+        }
+        </style>
     </head>
 
     <body>
@@ -14,11 +34,20 @@
                 <li><a href="book.html">Appointment Booking</a></li>
             </ul>
         </nav>
-        <h1>Design your nails!</h1>
-        <p>Feel free to make designs for your nails before your appointment. 
-            Everything provided in this sandbox are materials that I have.
-            Upload inspo nail designs here too.
-        </p>
+        <div class="content">
+            <h1>Design your nails!</h1>
+            <div class="text-box">
+                <p>Feel free to make designs for your nails before your appointment. 
+                    Everything provided in this sandbox are materials that I have.
+                    You can upload inspo nail designs here too.
+                </p>
+            </div>
+        </div>
     </body>
+
+    <footer>
+        <p>Contact: <a href="mailto:helena.fu@tufts.edu">helena.fu@tufts.edu</a></p>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/helena-fu-162764243/" target="_blank">LinkedIn</a></p>
+    </footer>
 
 </html>
