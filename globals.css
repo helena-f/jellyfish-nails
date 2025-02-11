@@ -25,7 +25,12 @@ nav {
     background: linear-gradient(to bottom, #a8e6cf, #f1ab92); /* Gradient from sky blue to orange */
     padding: 10px;
     min-height: 50px; /* Ensure the nav has a minimum height */
-
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    position: fixed; /* Fix the nav to the top */
+    top: 0; /* Position it at the top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays above other content */
 }
 nav a {
     color: #003366; /* Dark blue text for links */
@@ -40,12 +45,15 @@ nav {
     overflow: hidden; /* Clear floats */
 }
 nav ul {
+    display: flex; /* Use flexbox for layout */
     list-style-type: none; /* Remove bullet points */
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
+    justify-content: space-around; /* Space items evenly */
 }
 nav ul li {
-    float: left; /* Align items horizontally */
+    flex: 1; /* Allow items to grow */
+    text-align: center; /* Center text */
 }
 nav ul li a {
     display: block; /* Make links fill the list item */
@@ -60,11 +68,10 @@ nav ul li a:hover {
 }
 .portfolio-container {
     display: grid; /* Use grid layout */
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
-    gap: 20px; /* Space between items */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Set smaller minimum width for images */
+    gap: 15px; /* Space between items */
     margin-top: 20px; /* Space above the portfolio */
     width: 80%; /* Width of the portfolio container */
-    flex: 1; /* Allow the container to grow and take available space */
 }
 .portfolio-item {
     overflow: hidden; /* Hide overflow */
@@ -110,4 +117,31 @@ footer a:hover {
 
 .book-now-button:hover {
     background-color: #005f8a; /* Darker shade on hover */
+}
+
+/* Styles for mobile devices */
+@media (max-width: 600px) {
+    .content {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .book-now-button {
+        width: 100%; /* Make the button full width on mobile */
+    }
+
+    .text-box {
+        max-width: 100%; /* Allow the text box to take full width */
+    }
+}
+
+/* Media query for very small screens */
+@media (max-width: 400px) {
+    .portfolio-container {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Further adjust grid for smaller screens */
+    }
 }
